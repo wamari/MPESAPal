@@ -1,0 +1,204 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ericwamari.mpesapal.CalcFragment"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/textViewAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="MPESA Cost Calculator"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:hint="enter amount"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewAmount"
+        android:layout_marginRight="16dp" />
+
+    <TextView
+        android:id="@+id/textViewRegisteredToSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Registered - To Send"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAmount"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/textViewRegisteredToSendAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0.00"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewRegisteredToSend"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="16dp" />
+
+    <TextView
+        android:id="@+id/textViewUnRegisteredToSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="UnRegistered - To Send"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRegisteredToSend" />
+
+    <TextView
+        android:id="@+id/textViewUnRegisteredToSendAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewUnRegisteredToSend"
+        android:layout_marginRight="16dp" />
+
+    <TextView
+        android:id="@+id/textViewAgentWithdraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="MPESA Agent Withdrawal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUnRegisteredToSend"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/textViewAgentAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewAgentWithdraw"
+        android:layout_marginRight="16dp" />
+
+    <TextView
+        android:id="@+id/textViewMinBalReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Minimum Balance - Registered"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAgentWithdraw"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/textViewMinBalRegAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewMinBalReg"
+        android:layout_marginRight="16dp" />
+
+    <TextView
+        android:id="@+id/textViewMinBalUnReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Minimum Balance - UnRegistered"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMinBalReg"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/textViewMinBalUnRegAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewMinBalUnReg"
+        android:layout_marginRight="16dp" />
+
+    <TextView
+        android:id="@+id/textViewMinBalRegSender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Minimum Balance - Registered Sender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMinBalUnReg"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/textViewMinBalRegSenderAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewMinBalRegSender"
+        android:layout_marginRight="16dp" />
+
+    <TextView
+        android:id="@+id/textViewMinBalUnRegSender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Minimum Balance - UnRegistered Sender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMinBalRegSender"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/textViewMinBalUnRegSenderAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewMinBalUnRegSender"
+        android:layout_marginRight="16dp" />
+
+    <TextView
+        android:id="@+id/textViewSuggested"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Suggested Send Amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMinBalUnRegSender"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/textViewSuggestedAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewSuggested"
+        android:layout_marginRight="16dp" />
+
+
+</android.support.constraint.ConstraintLayout>
+
+
+
+
